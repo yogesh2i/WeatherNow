@@ -1,5 +1,5 @@
-import { formatDate, formatTime } from "./helperFunctions"
-
+import { formatDate, formatTime } from "./helperFunctions";
+/* data format as expected by ui
 const filteredData = {
     place: '',
     time: '',
@@ -15,10 +15,13 @@ const filteredData = {
     weather: '',
     icon: ''
 }
+*/
 
-export function mainDataFilter(data){
-  
-  return{
+
+
+//formatting data according to requirements
+export function mainDataFilter(data) {
+  return {
     place: data.name,
     time: formatTime(data?.dt),
     date: formatDate(data?.dt),
@@ -32,5 +35,5 @@ export function mainDataFilter(data){
     feels: data?.main?.feels_like,
     weather: data?.weather[0]?.description,
     icon: data?.weather[0]?.icon,
-  }
+  };
 }

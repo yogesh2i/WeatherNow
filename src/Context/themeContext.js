@@ -1,19 +1,22 @@
-import React, {createContext, useContext, useState} from 'react';  
+import React, { createContext, useContext, useState } from "react";
 
+//global theme context to handle dark and light theme
 const ThemeContext = createContext(null);
 
-export const ThemeContextProvider = ({children})=>{
-    const [theme,setTheme] = useState('light');
+//theme provider
+export const ThemeContextProvider = ({ children }) => {
+  const [theme, setTheme] = useState("light");
 
-    function toggleTheme(){
-         setTheme((theme)=>theme=='light'?'dark':'light');
-    }
+  function toggleTheme() {
+    setTheme((theme) => (theme === "light" ? "dark" : "light"));
+  }
 
-    return(
-       <ThemeContext.Provider value={{theme,toggleTheme}}>
-         {children}
-       </ThemeContext.Provider>
-    )
-}
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
 
-export const useTheme = ()=> useContext(ThemeContext);
+//custom hook to provide theme controls
+export const useTheme = () => useContext(ThemeContext);
