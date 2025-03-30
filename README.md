@@ -14,7 +14,7 @@ An application to search live weather either by city name or zip code, built wit
 * Error and Loading ui
 
 
-*Note:*  Currently data being fetched by open weather api. Later will be switched to custom zynetic backend server.
+*Note:  Currently data being fetched by open weather api. Later will be switched to custom zynetic backend server.*
 
 <h3>Project status</h3>
 
@@ -41,6 +41,8 @@ To Start Server:
 To Visit App:
 
 `localhost:3000`  
+
+*Note:  Currently for easy access env file is provided. Will be removed later.*
 
 <h5>Images</h5>
 <img src="./uiFlow.png"/>
