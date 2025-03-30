@@ -23,8 +23,10 @@ An application to search live weather either by city name or zip code, built wit
 
 ## Installation and Setup Instructions
  
+**Steps:**
+* Clone down this repository. You will need `node` and `npm` installed globally on your machine.
+* Get Api key from open weather.  
 
-Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
 Installation:
 
@@ -43,6 +45,24 @@ To Visit App:
 `localhost:3000`  
 
 *Note:  Currently for easy access env file is provided. Will be removed later.*
+
+## Application Flow Overview
+
+* Application is divided in 3 parts
+   * Navbar
+   * Main Weather Info
+   * Forecast Info
+
+* Seperate context files are created along with custom hooks
+   * Theme context
+   * Main Weather Info context
+   * Forecast Info context
+   * Global Error context
+
+* Utility : contains helper functions
+   * Main weather info formatting function
+   * Forecast weather info formatter
+   * Other common helper functions like date ,time formatter     
 
 <h5>Images</h5>
 <img src="./uiFlow.png"/>
