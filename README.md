@@ -43,5 +43,5 @@ To Visit App:
 `localhost:3000`  
 
 <h5>Images</h5>
-<img src="./uiFlow"/>
-<img src="./sampleImg"/>
+<img src="./uiFlow.png"/>
+<img src="./sampleImg.png"/>
