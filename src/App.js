@@ -1,43 +1,53 @@
-import './App.scss';
-import Forecast from './Components/Sections/Forecast/Forecast';
-import MainInfo from './Components/Sections/MainInfo/MainInfo';
-import Navbar from './Components/Sections/Navbar/Navbar';
-import { useTheme } from './Context/themeContext';
-import styled from 'styled-components';
-import { WeatherContextProvider } from './Context/weatherInfoContext';
-import { ForecastContextProvider } from './Context/forecastContext';
-import { SearchContextProvider } from './Context/searchContext';
-import { useResultState } from './Context/resultStateContext';
-import Error from './Components/Features/ErrorPage/Error';
-
+import "./App.scss";
+import Forecast from "./Components/Sections/Forecast/Forecast";
+import MainInfo from "./Components/Sections/MainInfo/MainInfo";
+import Navbar from "./Components/Sections/Navbar/Navbar";
+import { useTheme } from "./Context/themeContext";
+import styled from "styled-components";
+import { WeatherContextProvider } from "./Context/weatherInfoContext";
+import { ForecastContextProvider } from "./Context/forecastContext";
+import { SearchContextProvider } from "./Context/searchContext";
+import { useResultState } from "./Context/resultStateContext";
+import Error from "./Components/Features/ErrorPage/Error";
 
 function App() {
-  const { theme } = useTheme();
-  const {error} = useResultState();
+  const { theme } = useTheme(); //getting current theme from custom theme hook
+  const { error } = useResultState(); //getting global error from custom result state hook
   return (
-    <SearchContextProvider>
-
-      <Container theme={theme}>
-        <div className='dashboard'>
+    <Container theme={theme}>
+      <SearchContextProvider>
+        <div className="dashboard">
+          {/* navbar holding theme toggle, search bar  */}
           <Navbar></Navbar>
+
           <WeatherContextProvider>
-           <ForecastContextProvider>
-            <MainInfo />
-            <Forecast />
-            {error && <Error/>}
-           </ForecastContextProvider>
+            <ForecastContextProvider>
+              {/* component to provide main Info about current weather */}
+              <MainInfo />
+              {/* component to provide forecast details  */}
+              <Forecast />
+              {/* error component gets displayed when theres error in either weather or forecasting function  */}
+              {error && <Error />}
+            </ForecastContextProvider>
           </WeatherContextProvider>
         </div>
-      </Container>
-    </SearchContextProvider>
+      </SearchContextProvider>
+    </Container>
   );
 }
 
 export default App;
 
-
-const Container = styled.div(({ theme }) => `
+//using styled component to manage theme effectively
+const Container = styled.div(
+  ({ theme }) => `
     min-height: 100vh;
-    background: ${theme == 'light' ? 'linear-gradient(to right, white, grey)' : 'linear-gradient(to right, #444444, #181818)'};
-    color: ${theme == 'light' ? 'black' : 'white'};
-  `);
+    background: ${
+      //setting background as liner fradient based on theme
+      theme === "light"
+        ? "linear-gradient(to right, white, grey)"
+        : "linear-gradient(to right, #444444, #181818)"
+    };
+    color: ${theme === "light" ? "black" : "white"};
+  `
+);
