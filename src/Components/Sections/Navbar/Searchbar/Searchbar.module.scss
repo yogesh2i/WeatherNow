@@ -1,0 +1,49 @@
+@import '../../../../mixins.scss';
+
+.container{
+    width: 40%;
+    position: relative;
+    @include sm{
+        width: 100%;
+    }
+.input,.recentBox{
+    width: 100%;
+    border-radius: 1rem;
+    padding: 0.3rem 1rem;
+    outline: none;
+    border: 1px solid grey;
+    font-size: 1rem;
+    background-color: #D9D9D9;
+    height: 2rem;
+    @include sm{
+        padding: 0.1rem 0.5rem;
+    }
+}
+
+.recentBox{
+    height: auto;
+    padding: 0.8rem 1rem;
+    border-radius: 2px;
+    border: none;
+    position: absolute;
+    color: grey;
+    ul{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.2rem;
+        font-weight: 300;
+        li{
+            list-style: none;
+            border-bottom: 1px solid grey;
+            width: 100%;
+            cursor: pointer;
+            &:hover{
+                color: rgb(49, 49, 49);
+            }
+        }
+    }
+}
+
+}

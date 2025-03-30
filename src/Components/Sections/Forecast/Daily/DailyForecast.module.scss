@@ -1,0 +1,34 @@
+@import '../../../../mixins.scss';
+
+.container{
+    border-radius: 2rem;
+    box-shadow: 10px 10px 4px rgba(0,0,0,0.5);
+    width: 30%;
+    padding: 1rem 0.8rem;
+    text-align: center;
+    .boldText{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .forecast{
+        margin: 2rem 0;
+       p{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+        span img{
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+}
+    @include md{
+        width: 100%;
+        padding: 0.6rem 0.4rem;
+        margin-bottom: 1rem;
+       
+    }
+
+}

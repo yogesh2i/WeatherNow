@@ -1,0 +1,32 @@
+@import '../../../../mixins.scss';
+
+.container{
+    border-radius: 2rem;
+    box-shadow: 10px 10px 4px rgba(0,0,0,0.5);
+    width: 30%;
+    padding: 4rem 0;
+    max-height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .place{
+      margin-bottom: 0.4rem;
+    }
+    .time{
+        font-size: 4rem;
+        font-weight: bold;
+    }
+
+    @include md{
+        width: 100%;
+        padding: 2rem 0;
+        margin-bottom: 1rem;
+        .place{
+            margin-bottom: 0.2rem;
+        }
+        .time{
+            font-size: 1.5rem;
+        }
+    }
+}

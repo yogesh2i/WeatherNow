@@ -1,0 +1,14 @@
+@import '../../../mixins.scss';
+.error{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    svg{
+        width: 20rem;
+        height: 20rem;
+        @include sm{
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+}

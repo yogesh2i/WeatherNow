@@ -1,0 +1,18 @@
+@import '../../../mixins.scss';
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    @include md{
+        display: block;
+    }
+    .timebox{
+        flex: 0.3;
+    }
+    .infobox{
+        flex: 0.7;
+    }
+}
