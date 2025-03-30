@@ -19,6 +19,7 @@ export default function Forecast() {
       setError(false); //reset global error state
       fetchForecast({ city });
     }
+    // eslint-disable-next-line
   }, [city, setError]);
 
   if (info.loading) {

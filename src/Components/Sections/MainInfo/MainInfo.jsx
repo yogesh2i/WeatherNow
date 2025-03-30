@@ -19,6 +19,7 @@ export default function MainInfo() {
       setError(false); //reset global errors if any
       fetchWeather({ city });
     }
+    // eslint-disable-next-line
   }, [city, setError]);
 
   if (info.loading) {
