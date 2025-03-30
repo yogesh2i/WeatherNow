@@ -1,14 +1,11 @@
-@import'../../../mixins.scss';
+@import "../../../mixins.scss";
 
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-    @include sm{
-        h2{
-            display: none;
-        }
+.nav {
+  @include flex(space-between, center);
+  margin-bottom: 2rem;
+  @include sm {
+    h2 {
+      display: none;
     }
+  }
 }
-

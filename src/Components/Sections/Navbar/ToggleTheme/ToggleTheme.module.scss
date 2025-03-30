@@ -1,13 +1,12 @@
-@import '../../../../mixins.scss';
+@import "../../../../mixins.scss";
 
-.toggle{
-    &> *{
+.toggle {
+  & > * {
     width: 1.5rem;
     height: 1.2rem;
-    @include sm{
-        width: 1rem;
-        height: 1rem;
+    @include sm {
+      width: 1rem;
+      height: 1rem;
     }
-    }
-   
+  }
 }

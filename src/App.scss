@@ -1,16 +1,10 @@
-@import './mixins.scss';
-
+@import "./mixins.scss";
 
 .dashboard {
-    padding: 2.5rem 4rem;
-   
-    @include sm{
-        padding: 0.5rem 0.2rem;
+  padding: 2.5rem 4rem;
 
- }
- 
+  @include sm {
+    //for smaller screens
+    padding: 0.5rem 0.2rem;
+  }
 }
-
-
-
-

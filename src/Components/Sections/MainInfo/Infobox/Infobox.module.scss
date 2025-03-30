@@ -1,77 +1,69 @@
-@import '../../../../mixins.scss';
+@import "../../../../mixins.scss";
 
-.container{
-    border-radius: 2rem;
-    box-shadow: 10px 10px 4px rgba(0,0,0,0.5);
-    width: 65%;
-    padding: 4rem 2rem;
-    max-height: 20rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;    
-    gap: 0.3rem;
-   
-    .left{
-       
-        p:nth-of-type(1){
-           font-size: 4rem;
-           font-weight: 700;
-        }
-        p:nth-of-type(2){
-            span{
-                font-size: 1.5rem;
-            }
-        }
-    }
+.container {
+  border-radius: 2rem;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.5);
+  width: 65%;
+  padding: 4rem 2rem;
+  max-height: 20rem;
+  @include flex(space-between, center);
+  gap: 0.3rem;
 
-    .middle{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 0.4rem;
-        img{
-            width: 120%;
-            height: 120%;
-        }
-        p{
-            font-size: 1.2rem;
-            font-weight: 700;
+  .left {
+    p:nth-of-type(1) {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+    p:nth-of-type(2) {
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
 
-        }
+  .middle {
+    @include flex(center, center, column);
+    gap: 0.4rem;
+    img {
+      width: 120%;
+      height: 120%;
     }
-    .right{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 1rem;
-        div{
-            flex: 1 1 calc(50% - 10px);
-            text-align: center;
-        }
+    p {
+      font-size: 1.2rem;
+      font-weight: 700;
     }
+  }
+  .right {
+    @include flex(space-between);
+    flex-wrap: wrap;
+    gap: 1rem;
+    div {
+      flex: 1 1 calc(50% - 10px);
+      text-align: center;
+    }
+  }
 
-    @include md{
-        flex-wrap: wrap;
-        width: 100%;
-        padding: 1rem 1rem;
-        margin-bottom: 1rem;
-        .left{
-            p:nth-of-type(1){
-               font-size: 2rem;
-            }
-            p:nth-of-type(2){
-              span{
-                font-size: 1rem;
-              }
-            }
+  @include md {
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    .left {
+      p:nth-of-type(1) {
+        font-size: 2rem;
+      }
+      p:nth-of-type(2) {
+        span {
+          font-size: 1rem;
         }
-        .right{
-            width: 100%;
-            font-size: 0.8rem;
-            div{
-                flex: 1;
-            }
-        }
+      }
     }
+    .right {
+      width: 100%;
+      font-size: 0.8rem;
+      div {
+        flex: 1;
+      }
+    }
+  }
 }

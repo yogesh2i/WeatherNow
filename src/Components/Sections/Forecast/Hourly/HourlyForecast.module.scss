@@ -1,38 +1,32 @@
-@import '../../../../mixins.scss';
+@import "../../../../mixins.scss";
 
-.container{
-    border-radius: 2rem;
-    box-shadow: 10px 10px 4px rgba(0,0,0,0.5);
-    width: 65%;
-    padding: 1rem 0.8rem;
-    text-align: center;
-    .boldText{
-        font-size: 1.5rem;
-        font-weight: bold;
+.container {
+  border-radius: 2rem;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.5);
+  width: 65%;
+  padding: 1rem 0.8rem;
+  text-align: center;
+  .boldText {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .forecast {
+    @include flex(flex-start, center);
+    overflow-x: auto;
+    margin: 2rem 0;
+    gap: 1.5rem;
+    p {
+      @include flex(center, center, column);
+      background-color: #a3a0a0;
+      max-width: max-content;
+      border-radius: 2rem;
+      padding-bottom: 1rem;
+      gap: 0.5rem;
     }
-    .forecast{
-        margin: 2rem 0;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        overflow-x: auto;
-        gap: 1.5rem;
-        p{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            background-color: #a3a0a0;
-            max-width: max-content;
-            border-radius: 2rem;
-            padding-bottom: 1rem;
-            gap: 0.5rem;
-        }
-    }
-    @include md{
-        width: 100%;
-        padding: 0.6rem 0.4rem;
-        margin-bottom: 1rem;
-       
-    }
+  }
+  @include md {
+    width: 100%;
+    padding: 0.6rem 0.4rem;
+    margin-bottom: 1rem;
+  }
 }
