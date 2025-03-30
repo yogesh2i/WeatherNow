@@ -1,25 +1,32 @@
 @mixin sm {
-    @media only screen and (max-width: 640px){
-        @content;
-    }
+  @media only screen and (max-width: 640px) {
+    @content;
+  }
 }
 @mixin md {
-    @media only screen and (max-width: 768px){
-        @content;
-    }
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
 }
 @mixin m {
-    @media only screen and (max-width: 1024px){
-        @content;
-    }
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
 }
 @mixin xl {
-    @media only screen and (max-width: 1280px){
-        @content;
-    }
+  @media only screen and (max-width: 1280px) {
+    @content;
+  }
 }
 @mixin xxl {
-    @media only screen and (max-width: 1536px){
-        @content;
-    }
+  @media only screen and (max-width: 1536px) {
+    @content;
+  }
+}
+
+@mixin flex($justify: center, $align: stretch, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
 }
