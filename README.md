@@ -73,7 +73,7 @@ To Visit App:
 
 ## Accessing the Application
 
-*Note: Don't forget to update environment variables in docker-compose.yml same as provided in .env
+*Note: Don't forget to update environment variables in docker-compose.yml same as provided in .env*
 
 Once the containers are running, you can access your application using the host ports defined in the `ports` section of your `docker-compose.yml` file. Refer to your `docker-compose.yml` file to determine the correct host port mappings.
 
@@ -86,7 +86,7 @@ To stop the running services:
 
 ```bash
 docker-compose down
-
+```
 
 
 *Note:  Currently for easy access env file is provided. Will be removed later.*
