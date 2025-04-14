@@ -6,6 +6,6 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - REACT_APP_APPID=a497fedd7120b405c78b91425bb94657
-      - REACT_APP_BASE_API_URL=https://api.openweathermap.org/data/2.5/
+      - REACT_APP_APPID=your api key
+      - REACT_APP_BASE_API_URL= open api url
  
